@@ -11,6 +11,8 @@ import com.sun.source.util.JavacTask;
 import com.sun.source.util.TreeScanner;
 import com.sun.source.util.Trees;
 
+import javax.lang.model.element.Element;
+import javax.lang.model.util.Types;
 import javax.tools.DocumentationTool;
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
@@ -149,6 +151,15 @@ public class CheckForPreIncrement {
                 return super.visitForLoop(t, v);
             }
         };
+
+//        Iterable<? extends Element> analyze = task.analyze();
+//        for (Element element : analyze) {
+//            System.out.println(element);
+//        }
+//
+//        Types types = task.getTypes();
+//        System.out.println(types);
+
 
         // visit each compilation unit tree object with our scanner
         for (var compUnitTree : task.parse()) {
