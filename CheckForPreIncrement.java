@@ -30,7 +30,7 @@ public class CheckForPreIncrement {
     public static void main(String[] args) throws IOException {
         Path path = Paths.get(args.length == 0 ? "." : args[0]);
 
-        path = Paths.get("/home/paulograbin/Projects/Personal/confirmation");
+        path = Paths.get("/home/paulograbin/Desktop/automata");
         System.out.println(path.toString());
 
         Files.walkFileTree(path, new SimpleFileVisitor<>() {
